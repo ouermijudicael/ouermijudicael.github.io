@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Jane Doe - Academic Website</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Include Tailwind CSS from CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            padding-top: 5rem;
+        }
+        .accent-color {
+            color: #2563eb; /* A nice blue for accents */
+        }
+        .section-header-line {
+            border-bottom: 2px solid #2563eb;
+            width: 100%; /* Full width for the blue line */
+            margin-bottom: 1.5rem;
+        }
+        /* Custom class to hide dropdown content by default */
+        .dropdown-content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-blue-600 text-white shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-wrap justify-center space-x-6 text-sm sm:text-base">
+            <a href="#about" class="hover:text-gray-200 transition-colors duration-200 font-semibold">About</a>
+            <a href="#research" class="hover:text-gray-200 transition-colors duration-200 font-semibold">Research</a>
+            <a href="#publications" class="hover:text-gray-200 transition-colors duration-200 font-semibold">Publications</a>
+            <a href="#teaching" class="hover:text-gray-200 transition-colors duration-200 font-semibold">Teaching</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <!-- Header Section: Profile Card -->
+        <header class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+            <!-- Profile Image -->
+            <div class="w-48 h-48 flex-shrink-0">
+                <img src="https://placehold.co/400x400/2563eb/ffffff?text=JD" alt="Profile Picture of Dr. Jane Doe" class="rounded-full shadow-lg w-full h-full object-cover border-4 border-blue-600">
+            </div>
+
+            <!-- Profile Info -->
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-2">Dr. Jane Doe</h1>
+                <p class="text-xl text-blue-600 font-semibold mb-3">Postdoctoral Researcher</p>
+
+                <!-- Contact & Links section at the top -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-base md:text-lg mb-4 text-gray-600">
+                    <a href="mailto:janedoe@example.edu" class="text-blue-600 hover:underline">Email</a>
+                    <a href="https://github.com/janedoe" class="text-blue-600 hover:underline">GitHub</a>
+                    <a href="https://scholar.google.com/" class="text-blue-600 hover:underline">Google Scholar</a>
+                    <a href="https://linkedin.com/in/janedoe" class="text-blue-600 hover:underline">LinkedIn</a>
+                </div>
+
+                <!-- Email and office location -->
+                <p class="text-lg text-gray-600">
+                    <strong class="text-gray-900">Office:</strong> Building 123, Room 456 <br>
+                    <strong class="text-gray-900">Email:</strong> janedoe@example.edu
+                </p>
+            </div>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main>
+            <!-- About Section -->
+            <section id="about" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">About Me</h2>
+                <div class="section-header-line"></div>
+                <p class="text-lg text-gray-600 leading-relaxed mt-4">
+                    Welcome to my academic website! I hold a Ph.D. in Bioinformatics from a leading university. My research interests include developing novel algorithms for single-cell genomics, creating interactive data visualizations, and exploring the ethical implications of AI in healthcare. I am an advocate for open-source science and regularly contribute to various community projects. In my free time, I enjoy hiking and playing the piano.
+                </p>
+            </section>
+
+            <!-- Research Interests Section -->
+            <section id="research" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Research Interests</h2>
+                <div class="section-header-line"></div>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-600 mt-4">
+                    <li>Computational Biology</li>
+                    <li>Genomic Data Analysis</li>
+                    <li>Machine Learning in Healthcare</li>
+                    <li>Algorithm Development for Single-Cell Genomics</li>
+                </ul>
+            </section>
+            
+            <!-- Publications Section -->
+            <section id="publications" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Publications</h2>
+                <div class="section-header-line"></div>
+                
+                <!-- Journals Section -->
+                <h3 class="text-2xl font-bold text-gray-800 mt-6 mb-4">Journals</h3>
+                <ul class="space-y-6 text-lg">
+                    <!-- Journal Publication 1 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">1. A Novel Method for Single-Cell RNA Sequencing Analysis</p>
+                            <p class="text-gray-600 text-base mb-4">J. Doe, S. Smith, B. Chen. <em class="text-gray-500">Nature Biotechnology</em>, 2023.</p>
+
+                            <!-- Links row and dropdown content -->
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-1">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-1">BibTeX</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+
+                            <div id="abstract-1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                </p>
+                            </div>
+
+                            <div id="bibtex-1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{doe2023novel,
+    title={A Novel Method for Single-Cell RNA Sequencing Analysis},
+    author={Doe, J. and Smith, S. and Chen, B.},
+    journal={Nature Biotechnology},
+    volume={41},
+    number={5},
+    pages={567--574},
+    year={2023},
+    publisher={Nature Publishing Group}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Journal Publication 2 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">2. Machine Learning Models for Predicting Protein Structures</p>
+                            <p class="text-gray-600 text-base mb-4">S. Smith, J. Doe, A. Rodriguez. <em class="text-gray-500">Journal of Molecular Biology</em>, 2022.</p>
+
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-2">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-2">BibTeX</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+
+                            <div id="abstract-2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                </p>
+                            </div>
+
+                            <div id="bibtex-2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{smith2022machine,
+    title={Machine Learning Models for Predicting Protein Structures},
+    author={Smith, S. and Doe, J. and Rodriguez, A.},
+    journal={Journal of Molecular Biology},
+    volume={44},
+    number={3},
+    pages={321--330},
+    year={2022},
+    publisher={Elsevier}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Journal Publication 3 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">3. Ethical Frameworks for Genomic Data Sharing</p>
+                            <p class="text-gray-600 text-base mb-4">B. Chen, J. Doe. <em class="text-gray-500">Bioethics Journal</em>, 2021.</p>
+
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-3">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-3">BibTeX</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+
+                            <div id="abstract-3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                </p>
+                            </div>
+
+                            <div id="bibtex-3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{chen2021ethical,
+    title={Ethical Frameworks for Genomic Data Sharing},
+    author={Chen, B. and Doe, J.},
+    journal={Bioethics Journal},
+    volume={12},
+    number={4},
+    pages={112--120},
+    year={2021},
+    publisher={Bioethics Press}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Workshops Section -->
+                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Workshops</h3>
+                <ul class="space-y-6 text-lg">
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">1. Presentation at the International Machine Learning Conference</p>
+                            <p class="text-gray-600 text-base mb-4">J. Doe, S. Smith. <em class="text-gray-500">IMLC Workshop on AI in Healthcare</em>, 2024.</p>
+
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-4">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-4">BibTeX</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+
+                            <div id="abstract-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    This is a placeholder for the abstract of the workshop paper. This could include a summary of the research presented at the conference.
+                                </p>
+                            </div>
+
+                            <div id="bibtex-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@inproceedings{doe2024presentation,
+    title={Presentation at the International Machine Learning Conference},
+    author={Doe, J. and Smith, S.},
+    booktitle={IMLC Workshop on AI in Healthcare},
+    year={2024}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Other Manuscripts Section -->
+                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Other Manuscripts</h3>
+                <ul class="space-y-6 text-lg">
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">1. An Introduction to Bioinformatics</p>
+                            <p class="text-gray-600 text-base mb-4">J. Doe. <em class="text-gray-500">Preprint on arXiv</em>, 2024.</p>
+
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-5">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-5">BibTeX</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
+                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+
+                            <div id="abstract-5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    This is a placeholder for the abstract of the preprint. This section provides a summary of the work that is not yet formally peer-reviewed or published.
+                                </p>
+                            </div>
+
+                            <div id="bibtex-5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@misc{doe2024introduction,
+    title={An Introduction to Bioinformatics},
+    author={Doe, J.},
+    year={2024},
+    eprint={arXiv:2401.12345},
+    archivePrefix={arXiv},
+    primaryClass={q-bio.GN}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Talks Section -->
+            <section id="talks" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Talks</h2>
+                <div class="section-header-line"></div>
+                <ul class="space-y-4 text-lg mt-4">
+                    <li>
+                        <p class="font-semibold text-gray-800">2. "The Future of AI in Healthcare"</p>
+                        <p class="text-gray-600 text-base">Invited Talk, Stanford University, 2024</p>
+                        <a href="#" class="text-blue-600 hover:underline transition-colors duration-200 text-sm font-medium">Slides</a>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">1. "Genomic Data Analysis for Beginners"</p>
+                        <p class="text-gray-600 text-base">Guest Lecture, MIT, 2023</p>
+                        <a href="#" class="text-blue-600 hover:underline transition-colors duration-200 text-sm font-medium">Slides</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Teaching Experience</h2>
+                <div class="section-header-line"></div>
+                <ul class="space-y-4 text-lg mt-4">
+                    <li>
+                        <p class="font-semibold text-gray-800">Course: Introduction to Bioinformatics</p>
+                        <p class="text-gray-600 text-base">Graduate Teaching Assistant, University of Example, 2022-2023</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Course: Advanced Statistical Methods</p>
+                        <p class="text-gray-600 text-base">Guest Lecturer, University of Example, 2021</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Awards Section -->
+            <section id="awards" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Awards & Honors</h2>
+                <div class="section-header-line"></div>
+                <ul class="space-y-4 text-lg mt-4">
+                    <li>
+                        <p class="font-semibold text-gray-800">Young Investigator Award</p>
+                        <p class="text-gray-600 text-base">International Society for Computational Biology, 2024</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Best Student Paper</p>
+                        <p class="text-gray-600 text-base">Annual Conference on Bioinformatics, 2023</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- CV Section -->
+            <section id="cv" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Curriculum Vitae</h2>
+                <div class="section-header-line"></div>
+                <p class="text-lg text-gray-600 leading-relaxed mt-4">
+                    You can view or download my CV from the link below. It contains a detailed overview of my academic background, research experience, and professional achievements.
+                </p>
+                <div class="mt-4">
+                    <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-200">Download CV (PDF)</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-600 text-sm py-8 mt-10">
+        <p>&copy; 2024 Jane Doe. All rights reserved.</p>
+        <p>Built with ❤️ and Tailwind CSS.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to handle dropdown toggling
+            const dropdownLinks = document.querySelectorAll('.toggle-dropdown');
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.target.dataset.target;
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // Get the parent container to close other open dropdowns in the same publication item
+                        const parentContainer = e.target.closest('li');
+                        if (parentContainer) {
+                            const otherDropdowns = parentContainer.querySelectorAll('.dropdown-content');
+                            otherDropdowns.forEach(dropdown => {
+                                if (dropdown.id !== targetId) {
+                                    dropdown.style.display = 'none';
+                                }
+                            });
+                        }
+                        
+                        // Toggle the clicked dropdown
+                        targetElement.style.display = targetElement.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+
+            // BibTeX copy functionality
+            const copyButtons = document.querySelectorAll('.copy-bibtex');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const bibtexCode = e.target.closest('.dropdown-content').querySelector('.bibtex-code');
+                    bibtexCode.select();
+                    document.execCommand('copy');
+
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+                    button.classList.add('bg-green-500');
+
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.classList.remove('bg-green-500');
+                        button.classList.add('bg-blue-500', 'hover:bg-blue-600');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
