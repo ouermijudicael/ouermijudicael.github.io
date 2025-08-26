@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jane Doee - Academic Website</title>
+    <title>Timbwaoga A. J. Ouermi (TAJO) - Academic Website</title>
     <!-- Use the Inter font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Include Tailwind CSS from CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -17,10 +19,10 @@
             padding-top: 5rem;
         }
         .accent-color {
-            color: #2563eb; /* A nice blue for accents */
+            color: #7f1d1d; /* A nice red for accents */
         }
         .section-header-line {
-            border-bottom: 2px solid #2563eb;
+            border-bottom: 2px solid #7f1d1d;
             width: 100%; /* Full width for the blue line */
             margin-bottom: 1.5rem;
         }
@@ -28,12 +30,31 @@
         .dropdown-content {
             display: none;
         }
+        .bg-red-800 {
+            background-color: #7f1d1d;
+        }
+        .hover\:bg-red-900:hover {
+            background-color: #6b1818;
+        }
+        .border-red-800 {
+            border-color: #7f1d1d;
+        }
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem; /* Space between links and dropdowns */
+        }
+        .publication-item {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Fixed Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 bg-blue-600 text-white shadow-lg z-50">
+    <nav class="fixed top-0 left-0 right-0 bg-red-800 text-white shadow-lg z-50">
         <div class="container mx-auto px-4 py-4 flex flex-wrap justify-center space-x-6 text-sm sm:text-base">
             <a href="#about" class="hover:text-gray-200 transition-colors duration-200 font-semibold">About</a>
             <a href="#research" class="hover:text-gray-200 transition-colors duration-200 font-semibold">Research</a>
@@ -43,35 +64,40 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+    <!-- Header Section: Profile Card -->
+    <header class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 w-full max-w-6xl mx-auto">
+        <!-- Profile Image -->
+        <div class="w-48 h-48 flex-shrink-0">
+        <img src="teasers/tajo.jpg" alt="Profile Picture of Timbwaoga A. J. Ouermi" class="rounded-full shadow-lg w-full h-full object-cover border-4 border-red-800">
+        </div>
 
-        <!-- Header Section: Profile Card -->
-        <header class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
-            <!-- Profile Image -->
-            <div class="w-48 h-48 flex-shrink-0">
-                <img src="https://placehold.co/400x400/2563eb/ffffff?text=JD" alt="Profile Picture of Dr. Jane Doe" class="rounded-full shadow-lg w-full h-full object-cover border-4 border-blue-600">
-            </div>
+        <!-- Profile Info -->
+        <div class="text-center md:text-left">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Timbwaoga A. J. Ouermi (TAJO)</h1>
+        <p class="text-xl text-red-800 font-semibold mb-3">Postdoctoral Researcher</p>
 
-            <!-- Profile Info -->
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-2">Dr. Jane Doe</h1>
-                <p class="text-xl text-blue-600 font-semibold mb-3">Postdoctoral Researcher</p>
+        <!-- Contact & Links section at the top -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-base md:text-lg mb-4 text-gray-600">
+        <a href="https://github.com/ouermijudicael" class="text-red-800 hover:underline">
+        <i class="fab fa-github mr-1"></i>GitHub
+        </a>
+        <a href="https://scholar.google.com/citations?user=your_id" class="text-red-800 hover:underline">
+        <i class="fas fa-graduation-cap mr-1"></i>Google Scholar
+        </a>
+        <!-- <a href="" class="text-red-800 hover:underline">
+        <i class="fab fa-linkedin mr-1"></i>LinkedIn
+        </a> -->
+        </div>
 
-                <!-- Contact & Links section at the top -->
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-base md:text-lg mb-4 text-gray-600">
-                    <a href="mailto:janedoe@example.edu" class="text-blue-600 hover:underline">Email</a>
-                    <a href="https://github.com/janedoe" class="text-blue-600 hover:underline">GitHub</a>
-                    <a href="https://scholar.google.com/" class="text-blue-600 hover:underline">Google Scholar</a>
-                    <a href="https://linkedin.com/in/janedoe" class="text-blue-600 hover:underline">LinkedIn</a>
-                </div>
-
-                <!-- Email and office location -->
-                <p class="text-lg text-gray-600">
-                    <strong class="text-gray-900">Office:</strong> Building 123, Room 456 <br>
-                    <strong class="text-gray-900">Email:</strong> janedoe@example.edu
-                </p>
-            </div>
-        </header>
+        <!-- Email and office location -->
+        <p class="text-lg text-gray-600">
+        <strong class="text-gray-900">Office:</strong> WEB 2658 <br>
+        <strong class="text-gray-900">Email:</strong> touermi@sci.utah.edu
+        </p> <br>
+        <p class="text-xl text-red-800 font-semibold mb-3">!Actively seeking academic and research positions!</p>
+        </div>
+    </header>
 
         <!-- Main Content Sections -->
         <main>
@@ -80,22 +106,106 @@
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">About Me</h2>
                 <div class="section-header-line"></div>
                 <p class="text-lg text-gray-600 leading-relaxed mt-4">
-                    Welcome to my academic website! I hold a Ph.D. in Bioinformatics from a leading university. My research interests include developing novel algorithms for single-cell genomics, creating interactive data visualizations, and exploring the ethical implications of AI in healthcare. I am an advocate for open-source science and regularly contribute to various community projects. In my free time, I enjoy hiking and playing the piano.
+                    Welcome to my website! I am a postdoctoral research associate at the scientific computing and imaging <a href="https://www.sci.utah.edu" class="hover:underline">SCI</a> institute under the mentorship of <a href="https://www.cs.utah.edu/~crj/" class="hover:underline">Prof. Chris Johnson</a>. I received my bachelor's degree in Physics and Computer Science from the University of Oregon in 2016 and my Ph.D. in Computing from the University of Utah in 2022. I was advised by <a href="https://www.sci.utah.edu/poeple/mb.html" class="hover:underline">Prof. Martin Berzins</a> and <a href="https://www.cs.utah.edu/~kirby/" class="hover:underline">Prof. Mike Kirby</a> for my Ph.D. dissertation and by <a href="https://cdux.cs.uoregon.edu/childs.html" class="hover:underline">Prof. Hank Child</a> for my undergraduate thesis.
                 </p>
             </section>
-
+            
             <!-- Research Interests Section -->
             <section id="research" class="py-6">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Research Interests</h2>
                 <div class="section-header-line"></div>
+                <p class="text-lg text-gray-600 leading-relaxed mt-4">
+                    My research focuses on the design and development of novel, robust, and uncertainty-aware computational and visualization frameworks for science and engineering applications, with a focus on:
+                </p>
                 <ul class="list-disc list-inside space-y-2 text-lg text-gray-600 mt-4">
-                    <li>Computational Biology</li>
-                    <li>Genomic Data Analysis</li>
-                    <li>Machine Learning in Healthcare</li>
-                    <li>Algorithm Development for Single-Cell Genomics</li>
+                    <li>Uncertainty quantification and visualization</li>
+                    <li>Structure-preserving high-order polynomial approximation</li>
+                    <li>Robust high-dimensional data reduction and analysis</li>
+                    <li>High-performance optimization techniques</li>
                 </ul>
             </section>
-            
+
+            <!-- Unpublished Manuscripts Section -->
+            <section id="submited-manuscripts" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Submited Manuscripts</h2>
+                <div class="section-header-line"></div>
+                
+                <!-- Unpublished submitted manuscripts -->
+                <ul class="space-y-6 text-lg">
+                    <!-- Manuscript 1 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">1. Hyper-differential sensitivity analysis with respect to model discrepancy: Prior Distributions</p>
+                            <p class="text-gray-600 text-base mb-4">Joseph Hart, Bart van Bloemen Waanders, Jixian Li, <strong class="text-gray-900">T. A. J. Ouermi</strong>, Chris R Johnson. <em class="text-gray-500">arXiv preprint arXiv:2504.19812</em>, 2025.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-u1">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-u1">BibTeX</a>
+                                <a href="https://arxiv.org/abs/2504.19812" class="hover:underline transition-colors duration-200" target="_blank">Preprint</a>
+                            </div>
+                            <div id="abstract-u1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Hyper-differential sensitivity analysis with respect to model discrepancy was recently developed to enable uncertainty quantification for optimization problems. 
+                                    The approach consists of two primary steps: (i) Bayesian calibration of the
+discrepancy between high- and low-fidelity models, and (ii) propagating the model discrepancy uncertainty through the
+optimization problem. When high-fidelity model evaluations are limited, as is common in practice, the prior discrepancy
+distribution plays a crucial role in the uncertainty analysis. However, specification of this prior is challenging due to
+its mathematical complexity and many hyper-parameters. This article presents a novel approach to specify the prior
+distribution. Our approach consists of two parts: (1) an algorithmic initialization of the prior hyper-parameters that
+uses existing data to initialize a hyper-parameter estimate, and (2) a visualization framework to systematically explore
+properties of the prior and guide tuning of the hyper-parameters to ensure that the prior captures the appropriate
+range of uncertainty. We provide detailed mathematical analysis and a collection of numerical examples that elucidate
+properties of the prior that are crucial to ensure uncertainty quantification.
+                                </p>
+                            </div>
+                            <div id="bibtex-u1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@unpublished{hart2025hyper,
+                  title={Hyper-differential sensitivity analysis with respect to model discrepancy: Prior Distributions},
+                  author={Hart, Joseph and Waanders, Bart van Bloemen and Li, Jixian and Ouermi, T. A. J. and Johnson, Chris R},
+                  journal={arXiv preprint arXiv:2504.19812},
+                  year={2025}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Manuscript 2 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">2. A Fast Iterative Robust Principal Component Analysis Method</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Jixian Li, Chris R Johnson. <em class="text-gray-500">arXiv preprint arXiv:2506.16013</em>, 2025.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-u2">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-u2">BibTeX</a>
+                                <a href="https://arxiv.org/abs/2506.16013" class="hover:underline transition-colors duration-200" target="_blank">Preprint</a>
+                            </div>
+                            <div id="abstract-u2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Principal Component Analysis (PCA) is widely used for dimensionality reduction
+and data analysis. However, PCA results are adversely affected by outliers often observed in real-world data. Existing robust PCA methods are often computationally
+expensive or exhibit limited robustness. In this work, we introduce a Fast Iterative
+Robust (FIR) PCA method by efficiently estimating the inliers center location and covariance. Our approach leverages Incremental PCA (IPCA) to iteratively construct a
+subset of data points that ensures improved location and covariance estimation that
+effectively mitigates the influence of outliers on PCA projection. We demonstrate
+that our method achieves competitive accuracy and performance compared to existing robust location and covariance methods while offering improved robustness to
+outlier contamination. We utilize simulated and real-world datasets to evaluate and
+demonstrate the efficacy of our approach in identifying and preserving underlying
+data structures in the presence of contamination.
+                                </p>
+                            </div>
+                            <div id="bibtex-u2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@unpublished{ouermi2025fast,
+                  title={A Fast Iterative Robust Principal Component Analysis Method},
+                  author={Ouermi, T. A. J. and Li, Jixian and Johnson, Chris R},
+                  journal={arXiv preprint arXiv:2506.16013},
+                  year={2025}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
             <!-- Publications Section -->
             <section id="publications" class="py-6">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Publications</h2>
@@ -106,201 +216,443 @@
                 <ul class="space-y-6 text-lg">
                     <!-- Journal Publication 1 -->
                     <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
-                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <a href="teasers/Fast-HARDI-teaser.png" class="enlarge-image" data-img="teasers/Fast-HARDI-teaser.png">
+                            <img src="teasers/Fast-HARDI-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
                         <div class="flex-1">
-                            <p class="font-semibold text-gray-800">1. A Novel Method for Single-Cell RNA Sequencing Analysis</p>
-                            <p class="text-gray-600 text-base mb-4">J. Doe, S. Smith, B. Chen. <em class="text-gray-500">Nature Biotechnology</em>, 2023.</p>
-
-                            <!-- Links row and dropdown content -->
-                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                            <p class="font-semibold text-gray-800">1. Fast HARDI Uncertainty Quantification and Visualization with Spherical Sampling</p>
+                            <p class="text-gray-600 text-base mb-4">Tark Patel, Tushar M Athawale, <strong class="text-gray-900">T. A. J. Ouermi</strong>, Chris R Johnson. <em class="text-gray-500">Computer Graphics Forum</em>, 2025.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-1">Abstract</a>
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-1">BibTeX</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
                             </div>
-
                             <div id="abstract-1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
                                 <p class="text-base text-gray-600 leading-relaxed">
-                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                    In this paper, we study uncertainty quantification and visualization of orientation distribution functions (ODF), which corresponds to the diffusion profile of high angular resolution diffusion imaging (HARDI) data. The shape inclusion probability (SIP) function is the state-of-the-art method for capturing the uncertainty of ODF ensembles. The current method of computing the SIP function with a volumetric basis exhibits high computational and memory costs, which can be a bottleneck to integrating uncertainty into HARDI visualization techniques and tools. We propose a novel spherical sampling framework for faster computation of the SIP function with lower memory usage and increased accuracy. In particular, we propose direct extraction of SIP isosurfaces, which represent confidence intervals indicating spatial uncertainty of HARDI glyphs, by performing spherical sampling of ODFs. Our spherical sampling approach requires much less sampling than the state-of-the-art volume sampling method, thus providing significantly enhanced performance, scalability, and the ability to perform implicit ray tracing. Our experiments demonstrate that the SIP isosurfaces extracted with our spherical sampling approach can achieve up to 8164× speedup, 37282× memory reduction, and 50.2% less SIP isosurface error compared to the classical volume sampling approach. We demonstrate the efficacy of our methods through experiments on synthetic and human-brain HARDI datasets.
                                 </p>
                             </div>
-
                             <div id="bibtex-1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
-                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{doe2023novel,
-    title={A Novel Method for Single-Cell RNA Sequencing Analysis},
-    author={Doe, J. and Smith, S. and Chen, B.},
-    journal={Nature Biotechnology},
-    volume={41},
-    number={5},
-    pages={567--574},
-    year={2023},
-    publisher={Nature Publishing Group}
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@article{patel2025fast,
+  title={Fast {HARDI} Uncertainty Quantification and Visualization with Spherical Sampling},
+  author={Patel, Tark and Athawale, Tushar M and Ouermi, T. A. J. and Johnson, Chris R},
+  booktitle={Computer Graphics Forum},
+  pages={e70138},
+  year={2025}
 }</textarea>
-                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
                             </div>
                         </div>
                     </li>
-                    
                     <!-- Journal Publication 2 -->
                     <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
-                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <a href="teasers/HiPPIS-teaser.png" class="enlarge-image" data-img="teasers/HiPPIS-teaser.png">
+                            <img src="teasers/HiPPIS-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
                         <div class="flex-1">
-                            <p class="font-semibold text-gray-800">2. Machine Learning Models for Predicting Protein Structures</p>
-                            <p class="text-gray-600 text-base mb-4">S. Smith, J. Doe, A. Rodriguez. <em class="text-gray-500">Journal of Molecular Biology</em>, 2022.</p>
-
-                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                            <p class="font-semibold text-gray-800">2. Algorithm 1041: HiPPIS—A High-order Positivity-preserving Mapping Software for Structured Meshes</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Robert M Kirby, Martin Berzins. <em class="text-gray-500">ACM Transactions on Mathematical Software</em>, 2024.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-2">Abstract</a>
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-2">BibTeX</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                                <a href="https://github.com/ouermijudicael/HiPPIS" class="hover:underline transition-colors duration-200">Code</a>
                             </div>
-
                             <div id="abstract-2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
                                 <p class="text-base text-gray-600 leading-relaxed">
-                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                    Polynomial interpolation is an important component of many computational problems. In several of these computational problems, failure to preserve positivity when using polynomials to approximate or map data values between meshes can lead to negative unphysical quantities. Currently, most polynomial-based methods for enforcing positivity are based on splines and polynomial rescaling. The spline-based approaches build interpolants that are positive over the intervals in which they are defined and may require solving a minimization problem and/or system of equations. The linear polynomial rescaling methods allow for high-degree polynomials but enforce positivity only at limited locations (e.g., quadrature nodes). This work introduces open-source software (HiPPIS) for high-order data-bounded interpolation (DBI) and positivity-preserving interpolation (PPI) that addresses the limitations of both the spline and polynomial rescaling methods. HiPPIS is suitable for approximating and mapping physical quantities such as mass, density, and concentration between meshes while preserving positivity. This work provides Fortran and Matlab implementations of the DBI and PPI methods, presents an analysis of the mapping error in the context of PDEs, and uses several 1D and 2D numerical examples to demonstrate the benefits and limitations of HiPPIS.
                                 </p>
                             </div>
-
                             <div id="bibtex-2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
-                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{smith2022machine,
-    title={Machine Learning Models for Predicting Protein Structures},
-    author={Smith, S. and Doe, J. and Rodriguez, A.},
-    journal={Journal of Molecular Biology},
-    volume={44},
-    number={3},
-    pages={321--330},
-    year={2022},
-    publisher={Elsevier}
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@article{ouermi2024algorithm,
+  title={Algorithm 1041: {HiPPIS—A} High-order Positivity-preserving Mapping Software for Structured Meshes},
+  author={Ouermi, T. A. J. and Kirby, Robert M and Berzins, Martin},
+  journal={ACM Transactions on Mathematical Software},
+  volume={50},
+  number={1},
+  pages={1--31},
+  year={2024},
+  publisher={ACM New York, NY, USA}
 }</textarea>
-                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
                             </div>
                         </div>
                     </li>
-                    
                     <!-- Journal Publication 3 -->
                     <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
-                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <a href="teasers/ENO-based-teaser.png" class="enlarge-image" data-img="teasers/ENO-based-teaser.png">
+                            <img src="teasers/ENO-based-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
                         <div class="flex-1">
-                            <p class="font-semibold text-gray-800">3. Ethical Frameworks for Genomic Data Sharing</p>
-                            <p class="text-gray-600 text-base mb-4">B. Chen, J. Doe. <em class="text-gray-500">Bioethics Journal</em>, 2021.</p>
-
-                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
+                            <p class="font-semibold text-gray-800">3. ENO-based high-order data-bounded and constrained positivity-preserving interpolation</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Robert M Kirby, Martin Berzins. <em class="text-gray-500">Numerical Algorithms</em>, 2023.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-3">Abstract</a>
                                 <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-3">BibTeX</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
                             </div>
-
                             <div id="abstract-3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
                                 <p class="text-base text-gray-600 leading-relaxed">
-                                    This is a placeholder for the abstract of the paper. This section would provide a brief summary of the research, its methods, and key findings, giving visitors a quick overview of your work.
+                                    A number of key scientific computing applications that are based upon tensor-product grid constructions, such as numerical weather prediction (NWP) and combustion simulations, require property-preserving interpolation. Essentially non-oscillatory (ENO) interpolation is a classic example of such interpolation schemes. In the aforementioned application areas, property preservation often manifests itself as a requirement for either data boundedness or positivity preservation. For example, in NWP, one may have to interpolate between the grid on which the dynamics is calculated to a grid on which the physics is calculated (and back). Interpolating density or other key physical quantities without accounting for property preservation may lead to negative values that are nonphysical and result in inaccurate representations and/or interpretations of the physical data. Property-preserving interpolation is straightforward when used in the context of low-order numerical simulation methods. High-order property-preserving interpolation is, however, nontrivial, especially in the case where the interpolation points are not equispaced. In this paper, we demonstrate that it is possible to construct high-order interpolation methods that ensure either data boundedness or constrained positivity preservation. A novel feature of the algorithm is that the positivity-preserving interpolant is constrained; that is, the amount by which it exceeds the data values may be strictly controlled. The algorithm we have developed comes with theoretical estimates that provide sufficient conditions for data boundedness and constrained positivity preservation. We demonstrate the application of our algorithm on a collection of 1D and 2D numerical examples, and show that in all cases property preservation is respected.
                                 </p>
                             </div>
-
                             <div id="bibtex-3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
-                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@article{chen2021ethical,
-    title={Ethical Frameworks for Genomic Data Sharing},
-    author={Chen, B. and Doe, J.},
-    journal={Bioethics Journal},
-    volume={12},
-    number={4},
-    pages={112--120},
-    year={2021},
-    publisher={Bioethics Press}
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@article{ouermi2023eno,
+  title={ENO-based high-order data-bounded and constrained positivity-preserving interpolation},
+  author={Ouermi, T. A. J. and Kirby, Robert M and Berzins, Martin},
+  journal={Numerical Algorithms},
+  volume={92},
+  number={3},
+  pages={1517--1551},
+  year={2023},
+  publisher={Springer US New York}
 }</textarea>
-                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Journal Publication 4 -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <a href="teasers/performance-optimization-teaser.png" class="enlarge-image" data-img="teasers/performance-optimization-teaser.png">
+                            <img src="teasers/performance-optimization-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">4. Performance optimization strategies for WRF physics schemes used in weather modeling</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Robert M Kirby, Martin Berzins. <em class="text-gray-500">International Journal of Networking and Computing</em>, 2018.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-4">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-4">BibTeX</a>
+                            </div>
+                            <div id="abstract-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Performance optimization in the petascale era and beyond in the exascale era has and will require modifications of legacy codes to take advantage of new architectures with large core counts and SIMD units. The Numerical Weather Prediction (NWP) physics codes considered here are optimized using thread-local structures of arrays (SOA). High-level and low-level optimization strategies are applied to the WRF Single-Moment 6-Class Microphysics Scheme (WSM6) and Global Forecast System (GFS) physics codes used in the NEPTUNE forecast code. By building on previous work optimizing WSM6 on the Intel Knights Landing (KNL), it is shown how to further optimize WMS6 and GFS physics, and GFS radiation on Intel KNL, Haswell, and potentially on future micro-architectures with many cores and SIMD vector units. The optimization techniques used herein employ thread-local structures of arrays (SOA), an OpenMP directive, OMP SIMD, and minor code transformations to enable better utilization of SIMD units, increase parallelism, improve locality, and reduce memory traffic. The optimized versions of WSM6, GFS physics, GFS radiation run 70, 27, and 23 faster (respectively) on KNL and 26, 18 and 30 faster (respectively) on Haswell than their respective original serial versions. Although this work targets WRF physics schemes, the findings are transferable to other performance optimization contexts and provide insight into the optimization of codes with complex physical models for present and near-future architectures with many core and vector units.
+                                </p>
+                            </div>
+                            <div id="bibtex-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@article{taj2018performance,
+  title={Performance optimization strategies for {WRF} physics schemes used in weather modeling},
+  author={Ouermi, T. A. J. and Kirby, Robert M and Berzins, Martin},
+  journal={International Journal of Networking and Computing},
+  volume={8},
+  number={2},
+  pages={301--327},
+  year={2018},
+  publisher={IJNC Editorial Committee}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
                             </div>
                         </div>
                     </li>
                 </ul>
 
                 <!-- Workshops Section -->
-                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Workshops</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Workshops and Conferences</h3>
                 <ul class="space-y-6 text-lg">
+                    <!-- 2025: Efficient Probabilistic Visualization of Local Divergence -->
                     <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
-                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <a href="teasers/divergence-uncertainty-wind-teaser.png" class="enlarge-image" data-img="teasers/divergence-uncertainty-wind-teaser.png">
+                            <img src="teasers/divergence-uncertainty-wind-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
                         <div class="flex-1">
-                            <p class="font-semibold text-gray-800">1. Presentation at the International Machine Learning Conference</p>
-                            <p class="text-gray-600 text-base mb-4">J. Doe, S. Smith. <em class="text-gray-500">IMLC Workshop on AI in Healthcare</em>, 2024.</p>
-
-                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
-                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-4">Abstract</a>
-                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-4">BibTeX</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            <p class="font-semibold text-gray-800">1. Efficient Probabilistic Visualization of Local Divergence of 2D Vector Fields with Independent Gaussian Uncertainty</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Eric Li, Kenneth Moreland, Dave Pugmire, Chris R Johnson, Tushar M. Athawale. <em class="text-gray-500">IEEE Workshop</em>, 2025.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w1">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w1">BibTeX</a>
                             </div>
-
-                            <div id="abstract-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                            <div id="abstract-w1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
                                 <p class="text-base text-gray-600 leading-relaxed">
-                                    This is a placeholder for the abstract of the workshop paper. This could include a summary of the research presented at the conference.
-                                </p>
+                                    Presents an efficient approach for probabilistic visualization of local divergence in 2D vector fields under independent Gaussian uncertainty. This work focuses on visualizing uncertainty of local divergence of two-dimensional vector fields. Divergence is one of the fundamental attributes of fluid flows, as it can help domain scientists analyze potential positions of sources (positive divergence) and sinks (negative divergence) in the flow. However, uncertainty inherent in vector field data can lead to erroneous divergence computations, adversely impacting downstream analysis. While Monte Carlo (MC) sampling is a classical approach for estimating divergence uncertainty, it suffers from slow convergence and poor scalability with increasing data size and sample counts. Thus, we present a two-fold contribution that tackles the challenges of slow convergence and limited scalability of the MC approach. (1) We derive a closed-form approach for highly efficient and accurate uncertainty visualization of local divergence, assuming independently Gaussian-distributed vector uncertainties. (2) We further integrate our approach into Viskores, a platform-portable parallel library, to accelerate uncertainty visualization. In our results, we demonstrate significantly enhanced efficiency and accuracy of our serial analytical (speed-up up to 1946) and parallel Viskores (speed-up up to 19698X) algorithms over the classical serial MC approach. We also demonstrate qualitative improvements of our probabilistic divergence visualizations over traditional mean-field visualization, which disregards uncertainty. We validate the accuracy and efficiency of our methods on wind forecast and ocean simulation datasets.
                             </div>
-
-                            <div id="bibtex-4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
-                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@inproceedings{doe2024presentation,
-    title={Presentation at the International Machine Learning Conference},
-    author={Doe, J. and Smith, S.},
-    booktitle={IMLC Workshop on AI in Healthcare},
-    year={2024}
-}</textarea>
-                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            <div id="bibtex-w1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{ouermi2025divergence,
+                  title={Efficient Probabilistic Visualization of Local Divergence of 2D Vector Fields with Independent Gaussian Uncertainty},
+                  author={Ouermi, T. A. J. and Li, Eric and Moreland, Kenneth and Pugmire, Dave and Johnson, Chris R and Athawale, Tushar M.},
+                  booktitle={},
+                  pages={5},
+                  year={2025},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
                             </div>
                         </div>
                     </li>
-                </ul>
-
-                <!-- Other Manuscripts Section -->
-                <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Other Manuscripts</h3>
-                <ul class="space-y-6 text-lg">
+                    <!-- 2025: Uncertainty Tube Visualization of Particle Trajectories -->
                     <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
-                        <img src="https://placehold.co/100x100/e5e7eb/6b7280?text=Image" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md">
+                        <a href="teasers/uncertainty-tube-teaser.png" class="enlarge-image" data-img="teasers/uncertainty-tube-teaser.png">
+                            <img src="teasers/uncertainty-tube-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
                         <div class="flex-1">
-                            <p class="font-semibold text-gray-800">1. An Introduction to Bioinformatics</p>
-                            <p class="text-gray-600 text-base mb-4">J. Doe. <em class="text-gray-500">Preprint on arXiv</em>, 2024.</p>
-
-                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-600 font-medium text-sm">
-                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-5">Abstract</a>
-                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-5">BibTeX</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Preprint</a>
-                                <a href="#" class="hover:underline transition-colors duration-200">Code</a>
+                            <p class="font-semibold text-gray-800">2. Uncertainty Tube Visualization of Particle Trajectories</p>
+                            <p class="text-gray-600 text-base mb-4">Jixian Li, <strong class="text-gray-900">T. A. J. Ouermi</strong>, Mengjiao Han, Chris R Johnson. <em class="text-gray-500">IEEE Workshop</em>, 2025.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w2">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w2">BibTeX</a>
                             </div>
-
-                            <div id="abstract-5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                            <div id="abstract-w2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
                                 <p class="text-base text-gray-600 leading-relaxed">
-                                    This is a placeholder for the abstract of the preprint. This section provides a summary of the work that is not yet formally peer-reviewed or published.
+                                    Predicting particle trajectories with neural networks (NNs) has substantially enhanced many scientific and engineering domains. However, effectively quantifying and visualizing the inherent uncertainty in predictions remains challenging. Without an understanding of the uncertainty, the reliability of NN models in applications where trustworthiness is paramount is significantly compromised. This paper introduces the <em>uncertainty tube</em>, a novel, computationally efficient visualization method designed to represent this uncertainty in NN-derived particle paths. Our key innovation is the design and implementation of a superelliptical tube that accurately captures and intuitively conveys nonsymmetric uncertainty. By integrating well-established uncertainty quantification techniques, such as Deep Ensembles, Monte Carlo Dropout (MC Dropout), and Stochastic Weight Averaging-Gaussian (SWAG), we demonstrate the practical utility of the <em>uncertainty tube</em>, showcasing its application on both synthetic and simulation datasets.
                                 </p>
                             </div>
-
-                            <div id="bibtex-5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
-                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none" readonly>@misc{doe2024introduction,
-    title={An Introduction to Bioinformatics},
-    author={Doe, J.},
-    year={2024},
-    eprint={arXiv:2401.12345},
-    archivePrefix={arXiv},
-    primaryClass={q-bio.GN}
-}</textarea>
-                                <button class="copy-bibtex absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Copy</button>
+                            <div id="bibtex-w2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{li2025visualizing,
+                  title={Uncertainty Tube Visualization of Particle Trajectories},
+                  author={Li, Jixian and Ouermi, T. A. J. and Han, Mengjiao and Johnson, Chris R},
+                  booktitle={},
+                  pages={11},
+                  year={2025},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2024: Glyph-Based Uncertainty Visualization and Analysis of Time-Varying Vector Fields -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <a href="teasers/uncertainty-glyphs-teaser.png" class="enlarge-image" data-img="teasers/uncertainty-glyphs-teaser.png">
+                            <img src="teasers/uncertainty-glyphs-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">3. Glyph-Based Uncertainty Visualization and Analysis of Time-Varying Vector Fields</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Jixian Li, Zachary Morrow, Bart Van Bloemen Waanders, Chris R Johnson. <em class="text-gray-500">IEEE Workshop on Uncertainty Visualization</em>, 2024.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w3">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w3">BibTeX</a>
+                                <a href="https://github.com/ouermijudicael/VectorFieldUncertaintyVis" class="hover:underline transition-colors duration-200">Code</a>
+                            </div>
+                            <div id="abstract-w3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Environmental data have inherent uncertainty which is often ignored in visualization. Meteorological stations and doppler radars, including their time series averages, have a wealth of uncertainty information that traditional vector visualization methods such as meteorological wind barbs and arrow glyphs simply ignore. We have developed a new vector glyph to visualize uncertainty in winds and ocean currents. Our approach is to include uncertainty in direction and magnitude, as well as the mean direction and length, in vector glyph plots. Our glyph shows the variation in uncertainty, and provides fair comparisons of data from instruments, models, and time averages of varying certainty. We also define visualizations that incorporate uncertainty in an unambiguous manner as verity visualization. We use both quantitative and qualitative methods to compare our glyphs to traditional ones. Subjective comparison tests with experts are provided, as well as objective tests, where the information density of our new glyphs and traditional glyphs are compared. The design of the glyph and numerous examples using environmental data are given. We show enhanced visualizations, data together with their uncertainty information, that may improve understanding of environmental vector field data quality.
+                                </p>
+                            </div>
+                            <div id="bibtex-w3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{ouermi2024glyph,
+                  title={Glyph-Based Uncertainty Visualization and Analysis of Time-Varying Vector Fields},
+                  author={Ouermi, T. A. J. and Li, Jixian and Morrow, Zachary and Waanders, Bart Van Bloemen and Johnson, Chris R},
+                  booktitle={2024 IEEE Workshop on Uncertainty Visualization: Applications, Techniques, Software, and Decision Frameworks},
+                  pages={73--77},
+                  year={2024},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2024: Estimation and visualization of isosurface uncertainty -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <a href="teasers/estimation-and-visualization-teaser.png" class="enlarge-image" data-img="teasers/estimation-and-visualization-teaser.png">
+                            <img src="teasers/estimation-and-visualization-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">4. Estimation and visualization of isosurface uncertainty from linear and high-order interpolation methods</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Jixian Li, Tushar M Athawale, Chris R Johnson. <em class="text-gray-500">IEEE Workshop on Uncertainty Visualization</em>, 2024.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w4">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w4">BibTeX</a>
+                            </div>
+                            <div id="abstract-w4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Isosurface visualization is fundamental for exploring and analyzing 3D volumetric data. Marching cubes (MC) algorithms with linear interpolation are commonly used for isosurface extraction and visualization. Although linear interpolation is easy to implement, it has limitations when the underlying data is complex and high-order, which is the case for most real-world data. Linear interpolation can output vertices at the wrong location. Its inability to deal with sharp features and features smaller than grid cells can lead to an incorrect isosurface with holes and broken pieces. Despite these limitations, isosurface visualizations typically do not include insight into the spatial location and the magnitude of these errors. We utilize high-order interpolation methods with MC algorithms and interactive visualization to highlight these uncertainties. Our visualization tool helps identify the regions of high interpolation errors. It also allows users to query local areas for details and compare the differences between isosurfaces from different interpolation methods. In addition, we employ high-order methods to identify and reconstruct possible features that linear methods cannot detect. We showcase how our visualization tool helps explore and understand the extracted isosurface errors through synthetic and real-world data.
+                                </p>
+                            </div>
+                            <div id="bibtex-w4" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{ouermi2024estimation,
+                  title={Estimation and visualization of isosurface uncertainty from linear and high-order interpolation methods},
+                  author={Ouermi, T. A. J. and Li, Jixian and Athawale, Tushar M and Johnson, Chris R},
+                  booktitle={2024 IEEE Workshop on Uncertainty Visualization: Applications, Techniques, Software, and Decision Frameworks},
+                  pages={51--61},
+                  year={2024},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2024: Visualizing Uncertainties in Ensemble Wildfire Forecast Simulations -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                         <a href="teasers/ensemble-wildfire-teaser.png" class="enlarge-image" data-img="teasers/ensemble-wildfire-teaser.png">
+                            <img src="teasers/ensemble-wildfire-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">5. Visualizing Uncertainties in Ensemble Wildfire Forecast Simulations</p>
+                            <p class="text-gray-600 text-base mb-4">Jixian Li, <strong class="text-gray-900">T. A. J. Ouermi</strong>, Chris R Johnson. <em class="text-gray-500">IEEE Workshop on Uncertainty Visualization</em>, 2024.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w5">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w5">BibTeX</a>
+                            </div>
+                            <div id="abstract-w5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Wildfires pose substantial risks to our health, environment, and economy. Studying wildfires is challenging due to their complex interaction with the atmosphere dynamics and the terrain. Researchers have employed ensemble simulations to study the relationship among variables and mitigate uncertainties in unpredictable initial conditions. However, many wildfire researchers are unaware of the advanced visualization available for conveying uncertainty. We designed and implemented an interactive visualization system for studying the uncertainties of fire spread patterns utilizing band-depth-based order statistics and contour boxplots. We also augment the visualization system with the summary of changes in the burned area and fuel content to help scientists identify interesting temporal events. In this paper, we demonstrate how our system can support wildfire experts in studying fire spread patterns, identifying outlier simulations, and navigating to interesting times based on a summary of events.
+                                </p>
+                            </div>
+                            <div id="bibtex-w5" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{li2024visualizing,
+                  title={Visualizing Uncertainties in Ensemble Wildfire Forecast Simulations},
+                  author={Li, Jixian and Ouermi, T. A. J. and Johnson, Chris R},
+                  booktitle={2024 IEEE Workshop on Uncertainty Visualization: Applications, Techniques, Software, and Decision Frameworks},
+                  pages={84--88},
+                  year={2024},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2017: OpenMP 4 Fortran Modernization of WSM6 for KNL -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <a href="teasers/performance-optimization-teaser.png" class="enlarge-image" data-img="teasers/performance-optimization-teaser.png">
+                            <img src="teasers/performance-optimization-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">6. OpenMP 4 Fortran Modernization of WSM6 for KNL</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Aaron Knoll, Robert M Kirby, Martin Berzins. <em class="text-gray-500">PEARC</em>, 2017.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w6">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w6">BibTeX</a>
+                            </div>
+                            <div id="abstract-w6" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Parallel code portability in the petascale era requires modifying existing codes to support new architectures with large core counts and SIMD vector units. OpenMP is a well established and increasingly supported vehicle for portable parallelization. As architectures mature and compiler OpenMP implementations evolve, best practices for code modernization change as well. In this paper, we examine the impact of newer OpenMP features (in particular OMP SIMD) on the Intel Xeon Phi Knights Landing (KNL) architecture, applied in optimizing loops in the single moment 6-class microphysics module (WSM6) in the US Navy's NEPTUNE code. We find that with functioning OMP SIMD constructs, low thread invocation overhead on KNL and reduced penalty for unaligned access compared to previous architectures, one can leverage OpenMP 4 to achieve reasonable scalability with relatively minor reorganization of a production physics code.
+                                </p>
+                            </div>
+                            <div id="bibtex-w6" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{ouermi2017openmp,
+                  title={OpenMP 4 Fortran Modernization of {WSM6} for {KNL}},
+                  author={Ouermi, T. A. J. and Knoll, Aaron and Kirby, Robert M and Berzins, Martin},
+                  booktitle={Proceedings of the Practice and Experience in Advanced Research Computing 2017 on Sustainability, Success and Impact},
+                  pages={12},
+                  year={2017},
+                  organization={ACM}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2017: Optimization strategies for WRF single-moment 6-class microphysics scheme (WSM6) on intel microarchitectures -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <a href="teasers/performance-optimization-teaser.png" class="enlarge-image" data-img="teasers/performance-optimization-teaser.png">
+                            <img src="teasers/performance-optimization-teaser.png" alt="Publication Teaser Image" class="flex-shrink-0 rounded-lg shadow-md w-60 h-35 object-contain bg-gray-100">
+                        </a>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">7. Optimization strategies for WRF single-moment 6-class microphysics scheme (WSM6) on intel microarchitectures</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Aaron Knoll, Robert M Kirby, Martin Berzins. <em class="text-gray-500">CANDAR</em>, 2017. <span class="text-green-700 font-semibold">Best Paper Award</span></p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-w7">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-w7">BibTeX</a>
+                            </div>
+                            <div id="abstract-w7" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Optimizations in the petascale era require modifications of existing codes to take advantage of new architectures with large core counts and SIMD vector units. This paper examines high-level and low-level optimization strategies for numerical weather prediction (NWP) codes. These strategies employ thread-local structures of arrays (SOA) and an OpenMP directive such as OMP SIMD. These optimization approaches are applied to the Weather Research Forecasting single-moment 6-class microphysics schemes (WSM6) in the US Navy NEPTUNE system. The results of this study indicate that the high-level approach with SOA and low-level OMP SIMD improves thread and vector parallelism by increasing data and temporal locality. The modified version of WSM6 runs 70x faster than the original serial code. This improvement is about 23.3x faster than the performance achieved by Ouermi et al. [1], and 14.9x faster than the performance achieved by Michalakes et al. [2]. <span class="text-green-700 font-semibold">Best Paper Award</span>
+                                </p>
+                            </div>
+                            <div id="bibtex-w7" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@inproceedings{ouermi2017optimization,
+                  title={Optimization strategies for {WRF} single-moment 6-class microphysics scheme ({WSM6}) on intel microarchitectures},
+                  author={Ouermi, T. A. J. and Knoll, Aaron and Kirby, Robert M and Berzins, Martin},
+                  booktitle={2017 Fifth International Symposium on Computing and Networking (CANDAR)},
+                  pages={146--152},
+                  year={2017},
+                  note={Best Paper Award},
+                  organization={IEEE}
+                }</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
                             </div>
                         </div>
                     </li>
                 </ul>
             </section>
 
-            <!-- Talks Section -->
-            <section id="talks" class="py-6">
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">Talks</h2>
+               <!-- Other Manuscripts Section -->
+            <section id="other-manuscripts" class="py-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Other Manuscripts</h2>
                 <div class="section-header-line"></div>
-                <ul class="space-y-4 text-lg mt-4">
-                    <li>
-                        <p class="font-semibold text-gray-800">2. "The Future of AI in Healthcare"</p>
-                        <p class="text-gray-600 text-base">Invited Talk, Stanford University, 2024</p>
-                        <a href="#" class="text-blue-600 hover:underline transition-colors duration-200 text-sm font-medium">Slides</a>
+                
+                <!-- Other manuscripts -->
+                <ul class="space-y-6 text-lg">
+                    <!-- Manuscript 1: Numerical testing of a new positivity-preserving interpolation algorithm -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">1. Numerical testing of a new positivity-preserving interpolation algorithm</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>, Robert M Kirby, Martin Berzins. <em class="text-gray-500">arXiv preprint arXiv:2009.08535</em>, 2020.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-o1">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-o1">BibTeX</a>
+                                <a href="https://arxiv.org/abs/2009.08535" class="hover:underline transition-colors duration-200" target="_blank">Preprint</a>
+                            </div>
+                            <div id="abstract-o1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    An important component of a number of computational modeling algorithms is an interpolation method that preserves the positivity of the function being interpolated. This report
+describes the numerical testing of a new positivity-preserving algorithm that is designed to be
+used when interpolating from a solution defined on one grid to different spatial grid. The motivating application for this work was a numerical weather prediction (NWP) code that uses a
+spectral element mesh discretization for its dynamics core and a cartesian tensor product mesh
+for the evaluation of its physics routines. This coupling of spectral element mesh, which uses
+nonuniformly spaced quadrature/collocation points, and uniformly-spaced cartesian mesh combined with the desire to maintain positivity when moving between these meshes necessitates our
+work. This new approach is evaluated against several typical algorithms in use on a range of
+test problems in one or more space dimensions. The results obtained show that the new method
+is competitive in terms of observed accuracy while at the same time preserving the underlying
+positivity of the functions being interpolated.
+                                </p>
+                            </div>
+                            <div id="bibtex-o1" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@techreport{ouermi2020numerical,
+  title={Numerical testing of a new positivity-preserving interpolation algorithm},
+  author={Ouermi, T. A. J. and Kirby, Robert M and Berzins, Martin},
+  journal={arXiv preprint arXiv:2009.08535},
+  year={2020}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <p class="font-semibold text-gray-800">1. "Genomic Data Analysis for Beginners"</p>
-                        <p class="text-gray-600 text-base">Guest Lecture, MIT, 2023</p>
-                        <a href="#" class="text-blue-600 hover:underline transition-colors duration-200 text-sm font-medium">Slides</a>
+                    <!-- Manuscript 2: PhD Thesis -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">2. Accelerating Physics Schemes in Numerical Weather Prediction Codes and Preserving Positivity in the Physics-Dynamics Coupling</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>. <em class="text-gray-500">Ph.D. Thesis, The University of Utah</em>, 2022.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-o2">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-o2">BibTeX</a>
+                            </div>
+                            <div id="abstract-o2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    Accurate forecasts have a direct impact on how we prepare for different weather events at personal, regional, and global levels. Many of the current numerical weather prediction (NWP) systems use legacy codes that are not adequately designed to take advantage of current and future modern compute resources. As we prepare for the Exascale era and the next generation of weather forecast systems, the ability of theses codes to efficiently use the compute resources is paramount for meeting the time requirement of forecasting and the desired resolution of 1 km. Many of the NWP codes are multidisciplinary in nature, combining building blocks from various areas of physics and atmospheric sciences that introduces the challenge of stitching these building blocks together. For example, some NWP systems use different meshes for the dynamics and the physics. This difference introduces negative and nonphysical quantities when mapping between physics and dynamics meshes. In this context, a mapping that does not preserve positivity leads to unstable simulation and a positive bias in the prediction of quantities such as moisture. This research focuses on 1) investigating different approaches for accelerating the physics schemes in NWP codes; and 2) developing a high-order positivity-preserving method (https://github.com/ouermijudicael/HiPPIS) for mapping solution values between different meshes.
+                                </p>
+                            </div>
+                            <div id="bibtex-o2" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@phdthesis{ouermi2022accelerating,
+  title={Accelerating Physics Schemes in Numerical Weather Prediction Codes and Preserving Positivity in the Physics-Dynamics Coupling},
+  author={Ouermi, T. A. J.},
+  year={2022},
+  pages={190},
+  school={The University of Utah}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Manuscript 3: Undergraduate Thesis -->
+                    <li class="p-6 transition-all rounded-md flex flex-row items-start space-x-6">
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-800">3. Evaluating Spatiotemporal Search Structures for Analysis from Lagrangian Basis Flow</p>
+                            <p class="text-gray-600 text-base mb-4"><strong class="text-gray-900">T. A. J. Ouermi</strong>. <em class="text-gray-500">Undergraduate Thesis, The University of Oregon</em>, 2022.</p>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-red-800 font-medium text-sm">
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="abstract-o3">Abstract</a>
+                                <a href="#" class="toggle-dropdown hover:underline transition-colors duration-200" data-target="bibtex-o3">BibTeX</a>
+                            </div>
+                            <div id="abstract-o3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4">
+                                <p class="text-base text-gray-600 leading-relaxed">
+                                    While flow visualization has traditionally been performed from the Eulerianperspective, the Lagrangian approach is gaining momentum in the scientificcommunity. This is because the Lagrangian approach offers more opportunities tomitigate I/O limitations than the traditional Eulerian approach. Particle trajectorytracing using the Lagrangian approach is performed by extracting Lagrangian basisflows, and using these flows to construct new trajectories from particle seedlocations. Tracing the trajectory of a given particle requires finding its neighboringbasis flows. Our work investigates different spatiotemporal search structures for thepurpose of particle trajectory tracing from Lagrangian basis flows. We conductedour study by evaluating the storage size, the build time, and the search time of thedifferent search structures over various configurations.
+                                </p>
+                            </div>
+                            <div id="bibtex-o3" class="dropdown-content bg-gray-50 p-4 rounded-lg mt-4 font-mono text-gray-800 relative">
+                                <textarea class="bibtex-code w-full h-40 bg-transparent resize-none outline-none font-mono text-sm" readonly>@thesis{ouermi2016undergradthesis,
+  title={Evaluating Spatiotemporal Search Structures for Analysis
+from Lagrangian Basis Flow},
+  author={Ouermi, T. A. J.},
+  year={2016},
+  pages={46},
+  school={The University of Oregon}
+}</textarea>
+                                <button class="copy-bibtex absolute top-2 right-2 bg-red-800 text-white px-3 py-1 rounded-md text-xs hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-opacity-50">Copy</button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </section>
@@ -309,14 +661,36 @@
             <section id="teaching" class="py-6">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Teaching Experience</h2>
                 <div class="section-header-line"></div>
-                <ul class="space-y-4 text-lg mt-4">
+                <ul class="space-y-6 text-lg mt-4">
                     <li>
-                        <p class="font-semibold text-gray-800">Course: Introduction to Bioinformatics</p>
-                        <p class="text-gray-600 text-base">Graduate Teaching Assistant, University of Example, 2022-2023</p>
+                        <p class="font-semibold text-gray-800">Co-Instructor, Computational Inverse Problems (CS 6962)</p>
+                        <p class="text-gray-600 text-base">University of Utah, Fall 2024</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> Office hours, lectures, prepare homework</p>
                     </li>
                     <li>
-                        <p class="font-semibold text-gray-800">Course: Advanced Statistical Methods</p>
-                        <p class="text-gray-600 text-base">Guest Lecturer, University of Example, 2021</p>
+                        <p class="font-semibold text-gray-800">Co-Instructor, Decomposition Techniques for Data and Computational Science (CS 6962)</p>
+                        <p class="text-gray-600 text-base">University of Utah, Fall 2023</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> Office hours, lectures, prepare homework</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Teaching Assistant, Advanced Scientific Computing I (CS 6210)</p>
+                        <p class="text-gray-600 text-base">University of Utah, Fall 2019</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> Office hours, guest lectures, prepare homework</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Teaching Assistant, Introduction to Scientific Computing I (CS 6210)</p>
+                        <p class="text-gray-600 text-base">University of Utah, Fall 2019</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> Office hours, guest lectures, prepare homework, manage TAs</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Tutor, Department of Mathematics and Physics</p>
+                        <p class="text-gray-600 text-base">University of Oregon, 2013–2016</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> 1-on-1 homework help, assist with in-class activities</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">TRiO STEM Tutor for Mathematics and Physics</p>
+                        <p class="text-gray-600 text-base">Lane Community College, 2012–2013</p>
+                        <p class="text-gray-600 text-base"><strong>Duties:</strong> 1-on-1 homework help</p>
                     </li>
                 </ul>
             </section>
@@ -327,12 +701,20 @@
                 <div class="section-header-line"></div>
                 <ul class="space-y-4 text-lg mt-4">
                     <li>
-                        <p class="font-semibold text-gray-800">Young Investigator Award</p>
-                        <p class="text-gray-600 text-base">International Society for Computational Biology, 2024</p>
+                        <p class="font-semibold text-gray-800">Best Paper Award, CANDAR 17</p>
+                        <p class="text-gray-600 text-base">Nov. 2017</p>
                     </li>
                     <li>
-                        <p class="font-semibold text-gray-800">Best Student Paper</p>
-                        <p class="text-gray-600 text-base">Annual Conference on Bioinformatics, 2023</p>
+                        <p class="font-semibold text-gray-800">Travel Scholarship, University of Utah School of Computing (Richard Tapia Conference)</p>
+                        <p class="text-gray-600 text-base">Sep. 2017</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Travel Scholarship (Richard Tapia Conference)</p>
+                        <p class="text-gray-600 text-base">Sep. 2016</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">International Cultural Service Program Scholarship (ICSP), University of Oregon</p>
+                        <p class="text-gray-600 text-base">Sep. 2013</p>
                     </li>
                 </ul>
             </section>
@@ -345,7 +727,7 @@
                     You can view or download my CV from the link below. It contains a detailed overview of my academic background, research experience, and professional achievements.
                 </p>
                 <div class="mt-4">
-                    <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-200">Download CV (PDF)</a>
+                    <a href="#" class="inline-block bg-red-800 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-red-900 transition-colors duration-200">Download CV (PDF)</a>
                 </div>
             </section>
         </main>
@@ -353,8 +735,8 @@
 
     <!-- Footer -->
     <footer class="text-center text-gray-600 text-sm py-8 mt-10">
-        <p>&copy; 2024 Jane Doe. All rights reserved.</p>
-        <p>Built with ❤️ and Tailwind CSS.</p>
+        <p>&copy; 2024 Timbwaoga A. J. Ouermi. All rights reserved.</p>
+        <p>Built with Tailwind CSS.</p>
     </footer>
 
     <script>
@@ -396,13 +778,13 @@
 
                     const originalText = button.textContent;
                     button.textContent = 'Copied!';
-                    button.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+                    button.classList.remove('bg-red-800', 'hover:bg-red-900');
                     button.classList.add('bg-green-500');
 
                     setTimeout(() => {
                         button.textContent = originalText;
                         button.classList.remove('bg-green-500');
-                        button.classList.add('bg-blue-500', 'hover:bg-blue-600');
+                        button.classList.add('bg-red-800', 'hover:bg-red-900');
                     }, 2000);
                 });
             });
